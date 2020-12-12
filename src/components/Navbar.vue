@@ -3,7 +3,11 @@
       <div id="navbar">
           <h2>Watch That Show!!!</h2>
           <div>
-              <input type="text" placeholder="Find That Show..." />
+              <input 
+                v-model="search" 
+                type="text" 
+                placeholder="Find That Show..." 
+            />
           </div>
       </div>
   </div>
@@ -11,7 +15,16 @@
 
 <script>
 export default {
-  name: 'Navbar',
+    data() {
+        return {
+            search: ''
+        }
+    },
+    watch: {
+        search() {
+            this.$store.dispatch('search', this.search);
+        }
+    }
 };
 </script>
 
