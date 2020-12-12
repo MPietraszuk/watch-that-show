@@ -12,15 +12,15 @@ export default {
         Movie,
     },
     data() {
-      return {
-          movies: [],
-      };
-  },
-  computed: {
-      movies() {
-          return this.$store.getters.getMovies;
-      },
-  },
+        return {
+            movies: [],
+        };
+    },
+    computed: {
+        movies() {
+            return this.$store.getters.getMovies;
+        },
+    },
 //   created() {
 //       this.movies = this.$store.getters.getMovies;      
 //   }
