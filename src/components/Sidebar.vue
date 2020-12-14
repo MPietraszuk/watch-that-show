@@ -126,7 +126,7 @@
 
 				console.log("SUBMIT: ", this.form);
 				this.$store.dispatch("addMovie", this.form);
-				this.showModal = false;
+				// this.showModal = false;
 			},
 		},
 	};
